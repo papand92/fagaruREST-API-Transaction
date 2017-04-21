@@ -71,13 +71,3 @@ your_back/oauth/v2/token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&grant_t
 ```
 
 As you need to have the `oauth_client` `secret`, this is not usable between our front and back, where `grant_type=authorization_code` will be used.
-
-## Bonus RFC-6749
-
-I found it was the clearest explanation of the [authorization_code](http://tools.ietf.org/html/rfc6749#section-1.3.1) :
-
-_The authorization code is obtained by using an authorization server as an intermediary between the client and resource owner. Instead of requesting authorization directly from the resource owner, the client directs the resource owner to an authorization server, which in turn directs the resource owner back to the client with the authorization code._
-
-_Before directing the resource owner back to the client with the authorization code, the authorization server authenticates the resource owner and obtains authorization. Because the resource owner only authenticates with the authorization server, the resource owner's credentials are never shared with the client._
-
-_The authorization code provides a few important security benefits, such as the ability to authenticate the client, as well as the transmission of the access token directly to the client without passing it through the resource owner's user-agent and potentially exposing it to others, including the resource owner._
