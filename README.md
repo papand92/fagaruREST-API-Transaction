@@ -1,13 +1,7 @@
-# fagaruREST-API-Transaction
+# fagaru REST-API-Transaction
 
-## You need to learn a bit of oAuth2
-
-Whatever the way you use to retrieve the `access_token`, you want to get something like this :
-
-
-### `grant_type=password`
-
-You still want an `access_token` but you get it in one request, by sending everything you have : `oauth_client` `id` and `secret`, and user credentials.
+### `grant_type=password` Obtenir un `access_token`
+Pour obtenir un `access_token` vous devez faire une demande en envoyant vos informations d'identification:`CLIENT_ID`, `CLIENT_SECRET`, `USERNAME`et `PASSWORD` à l'url `API_URL`
 
 #### `Request`
 ```
@@ -25,9 +19,9 @@ API_URL/oauth/v2/token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&grant_typ
 }
 ```
 
-### `grant_type=refresh_token`
+### `grant_type=refresh_token` Rafraîchir votre `access_token`
 
-This one is to refresh your `access_token`. As your token will expire in one hour, you can ask to refresh it :
+Lorsque votre token expirera en une heure, vous pouvez le rafraîchir:
 
 #### `Request`
 ```
